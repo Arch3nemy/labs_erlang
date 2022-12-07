@@ -1,13 +1,9 @@
-%%%-------------------------------------------------------------------
-%%% @author throu
-%%% @copyright (C) 2022, <COMPANY>
-%%% @doc
-%%%
-%%% @end
-%%% Created : 07. Dec 2022 7:27 PM
-%%%-------------------------------------------------------------------
 -module(lesson2_task14).
--author("throu").
+-export([main/0, duplicate/1]).
 
-%% API
--export([]).
+duplicate([]) -> [];
+duplicate([H | T]) -> [H,H | duplicate(T)].
+
+main()->
+  erlang:display(lesson2_task14:duplicate([a,b,c,c,d])),
+  true.
